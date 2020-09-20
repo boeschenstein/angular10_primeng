@@ -5,4 +5,22 @@
 <button pButton type="button" icon="pi pi-check" iconPos="left"></button>
 <p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
 
+<!-- PrimeFlex examples: -->
+
+<h5>Inline</h5>
+<input type="text" pInputText class="p-mr-2 p-d-inline" />
+<input type="text" pInputText class="p-d-inline" />
+
+<h5>Block</h5>
+<input type="text" pInputText class="p-mb-2 p-d-block" />
+<input type="text" pInputText class="p-d-block" />
+
+<h5>Visible on a Small Screen (burger icon)</h5>
+<p>Resize to view.</p>
+<p-button type="button" icon="pi pi-bars" styleClass="p-button-rounded p-d-md-none"></p-button>
+
+<h5>Hidden on a Small Screen (magnifier icon)</h5>
+<p>Resize to hide.</p>
+<p-button type="button" icon="pi pi-search" styleClass="p-button-rounded p-button-success p-d-none p-d-md-inline-flex"></p-button>
+
 <router-outlet></router-outlet>
