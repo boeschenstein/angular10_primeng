@@ -46,6 +46,20 @@ Details: https://primefaces.org/primeng/showcase/#/setup
 
 ## Hello World
 
+Add ButtonModule to app.module.ts:
+
+`import { ButtonModule } from 'primeng/button';`
+
+and 
+
+```
+  imports: [
+    ...,
+    ButtonModule
+  ],
+
+```
+
 Remove all in app.component.html and set this:
 
 ```html
