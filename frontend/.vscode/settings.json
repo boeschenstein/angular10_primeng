@@ -27,8 +27,12 @@
     "Bug"
   ],
   "cSpell.words": [
+    "firstname",
     "fontawesome",
     "fortawesome",
+    "inputtext",
+    "inputtextarea",
+    "lastname",
     "memoized",
     "ngrx",
     "primeflex",

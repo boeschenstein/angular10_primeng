@@ -1,3 +1,4 @@
+<h2>Buttons examples</h2>
 
 <button pButton type="button" label="Click" ></button>
 <p-button label="Click" ></p-button>
@@ -5,7 +6,7 @@
 <button pButton type="button" icon="pi pi-check" iconPos="left"></button>
 <p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
 
-<!-- PrimeFlex examples: -->
+<h2>PrimeFlex examples</h2>
 
 <h5>Inline</h5>
 <input type="text" pInputText class="p-mr-2 p-d-inline" />
@@ -22,5 +23,67 @@
 <h5>Hidden on a Small Screen (magnifier icon)</h5>
 <p>Resize to hide.</p>
 <p-button type="button" icon="pi pi-search" styleClass="p-button-rounded p-button-success p-d-none p-d-md-inline-flex"></p-button>
+
+<h2>FlexBox examples</h2>
+
+<div class="p-d-flex p-flex-wrap-reverse">
+  <div class="p-mr-2 p-mb-2">Item 1</div>
+  <div class="p-mr-2 p-mb-2">Item 2</div>
+  <div class="p-mr-2 p-mb-2">Item 3</div>
+  <div class="p-mr-2 p-mb-2">Item 4</div>
+  <div class="p-mr-2 p-mb-2">Item 5</div>
+  <div class="p-mr-2 p-mb-2">Item 6</div>
+</div>
+
+<h2>Form Layout examples</h2>
+
+<div class="card">
+  <h5>Horizontal and Fluid</h5>
+  <div class="p-fluid">
+      <div class="p-field p-grid">
+          <label for="firstname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Firstname</label>
+          <div class="p-col-12 p-md-10">
+              <input id="firstname4" type="text" pInputText> 
+          </div>
+      </div>
+      <div class="p-field p-grid">
+          <label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Lastname</label>
+          <div class="p-col-12 p-md-10">
+              <input id="lastname4" type="text" pInputText> 
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <h5>Advanced</h5>
+  <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-12 p-md-6">
+          <label for="firstname6">Firstname</label>
+          <input id="firstname6" type="text" pInputText> 
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+          <label for="lastname6">Lastname</label>
+          <input id="lastname6" type="text" pInputText> 
+      </div>
+      <div class="p-field p-col-12">
+          <label for="address">Address</label>
+          <textarea id="address" type="text" rows="4" pInputTextarea></textarea>
+      </div>
+      <div class="p-field p-col-12 p-md-6">
+          <label for="city">City</label>
+          <input id="city" type="text" pInputText> 
+      </div>
+      <div class="p-field p-col-12 p-md-3">
+          <label for="state">State</label>
+          <p-dropdown inputId="state" [options]="states" [(ngModel)]="selectedState" placeholder="Select" optionLabel="name"></p-dropdown>
+      </div>
+      <div class="p-field p-col-12 p-md-3">
+          <label for="zip">Zip</label>
+          <input id="zip" type="text" pInputText> 
+      </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
