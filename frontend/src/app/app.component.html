@@ -1,89 +1,240 @@
-<h2>Buttons examples</h2>
+<pre>{{ profileForm.value | json }}</pre>
 
-<button pButton type="button" label="Click" ></button>
-<p-button label="Click" ></p-button>
+<form [formGroup]="profileForm">
+  <h2>Buttons examples</h2>
 
-<button pButton type="button" icon="pi pi-check" iconPos="left"></button>
-<p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
+  <button pButton type="button" label="Click"></button>
+  <p-button label="Click"></p-button>
 
-<h2>PrimeFlex examples</h2>
+  <button pButton type="button" icon="pi pi-check" iconPos="left"></button>
+  <p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
 
-<h5>Inline</h5>
-<input type="text" pInputText class="p-mr-2 p-d-inline" />
-<input type="text" pInputText class="p-d-inline" />
+  <h2>Radiobuttons examples</h2>
+  <!-- 
+<p-radioButton name="groupname" value="val1" [(ngModel)]="selectedValue" label="Option 1"></p-radioButton>
+<p-radioButton name="groupname" value="val2" [(ngModel)]="selectedValue" label="Option 2"></p-radioButton> -->
 
-<h5>Block</h5>
-<input type="text" pInputText class="p-mb-2 p-d-block" />
-<input type="text" pInputText class="p-d-block" />
+  <h4>bound to string</h4>
 
-<h5>Visible on a Small Screen (burger icon)</h5>
-<p>Resize to view.</p>
-<p-button type="button" icon="pi pi-bars" styleClass="p-button-rounded p-d-md-none"></p-button>
+  <p-radioButton
+    name="groupnameGender"
+    [value]="'female'"
+    formControlName="gender"
+    label="Female"
+  ></p-radioButton>
+  <p-radioButton
+    name="groupnameGender"
+    [value]="'male'"
+    formControlName="gender"
+    label="Male"
+  ></p-radioButton>
 
-<h5>Hidden on a Small Screen (magnifier icon)</h5>
-<p>Resize to hide.</p>
-<p-button type="button" icon="pi pi-search" styleClass="p-button-rounded p-button-success p-d-none p-d-md-inline-flex"></p-button>
+  <h4>bound to int</h4>
 
-<h2>FlexBox examples</h2>
+  <p-radioButton
+    name="groupnameGenderInt"
+    [value]="0"
+    formControlName="genderInt"
+    label="Female"
+  ></p-radioButton>
+  <p-radioButton
+    name="groupnameGenderInt"
+    [value]="1"
+    formControlName="genderInt"
+    label="Male"
+  ></p-radioButton>
 
-<div class="p-d-flex p-flex-wrap-reverse">
-  <div class="p-mr-2 p-mb-2">Item 1</div>
-  <div class="p-mr-2 p-mb-2">Item 2</div>
-  <div class="p-mr-2 p-mb-2">Item 3</div>
-  <div class="p-mr-2 p-mb-2">Item 4</div>
-  <div class="p-mr-2 p-mb-2">Item 5</div>
-  <div class="p-mr-2 p-mb-2">Item 6</div>
-</div>
+  <h2>PrimeFlex examples</h2>
 
-<h2>Form Layout examples</h2>
+  <h5>Inline</h5>
+  <input type="text" pInputText class="p-mr-2 p-d-inline" />
+  <input type="text" pInputText class="p-d-inline" />
 
-<div class="card">
-  <h5>Horizontal and Fluid</h5>
-  <div class="p-fluid">
-      <div class="p-field p-grid">
-          <label for="firstname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Firstname</label>
-          <div class="p-col-12 p-md-10">
-              <input id="firstname4" type="text" pInputText> 
-          </div>
-      </div>
-      <div class="p-field p-grid">
-          <label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Lastname</label>
-          <div class="p-col-12 p-md-10">
-              <input id="lastname4" type="text" pInputText> 
-          </div>
-      </div>
+  <h5>Block</h5>
+  <input type="text" pInputText class="p-mb-2 p-d-block" />
+  <input type="text" pInputText class="p-d-block" />
+
+  <h5>Visible on a Small Screen (burger icon)</h5>
+  <p>Resize to view.</p>
+  <p-button
+    type="button"
+    icon="pi pi-bars"
+    styleClass="p-button-rounded p-d-md-none"
+  ></p-button>
+
+  <h5>Hidden on a Small Screen (magnifier icon)</h5>
+  <p>Resize to hide.</p>
+  <p-button
+    type="button"
+    icon="pi pi-search"
+    styleClass="p-button-rounded p-button-success p-d-none p-d-md-inline-flex"
+  ></p-button>
+
+  <h2>FlexBox examples</h2>
+
+  <div class="p-d-flex p-flex-wrap-reverse">
+    <div class="p-mr-2 p-mb-2">Item 1</div>
+    <div class="p-mr-2 p-mb-2">Item 2</div>
+    <div class="p-mr-2 p-mb-2">Item 3</div>
+    <div class="p-mr-2 p-mb-2">Item 4</div>
+    <div class="p-mr-2 p-mb-2">Item 5</div>
+    <div class="p-mr-2 p-mb-2">Item 6</div>
   </div>
-</div>
 
+  <h2>Form Layout examples</h2>
 
-<div class="card">
-  <h5>Advanced</h5>
-  <div class="p-fluid p-formgrid p-grid">
+  <div class="card">
+    <h5>Horizontal and Fluid</h5>
+    <div class="p-fluid">
+      <div class="p-field p-grid">
+        <label for="firstname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0"
+          >Firstname</label
+        >
+        <div class="p-col-12 p-md-10">
+          <input
+            id="firstname4"
+            type="text"
+            pInputText
+            formControlName="firstName"
+          />
+        </div>
+      </div>
+      <div class="p-field p-grid">
+        <label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0"
+          >Lastname</label
+        >
+        <div class="p-col-12 p-md-10">
+          <input
+            id="lastname4"
+            type="text"
+            pInputText
+            formControlName="lastName"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5>Advanced</h5>
+    <div class="p-fluid p-formgrid p-grid">
       <div class="p-field p-col-12 p-md-6">
-          <label for="firstname6">Firstname</label>
-          <input id="firstname6" type="text" pInputText> 
+        <label for="firstname6">Firstname</label>
+        <input
+          id="firstname6"
+          type="text"
+          pInputText
+          formControlName="firstName"
+        />
       </div>
       <div class="p-field p-col-12 p-md-6">
-          <label for="lastname6">Lastname</label>
-          <input id="lastname6" type="text" pInputText> 
+        <label for="lastname6">Lastname</label>
+        <input
+          id="lastname6"
+          type="text"
+          pInputText
+          formControlName="lastName"
+        />
       </div>
       <div class="p-field p-col-12">
-          <label for="address">Address</label>
-          <textarea id="address" type="text" rows="4" pInputTextarea></textarea>
+        <label for="address">Address</label>
+        <textarea id="address" type="text" rows="4" pInputTextarea></textarea>
       </div>
       <div class="p-field p-col-12 p-md-6">
-          <label for="city">City</label>
-          <input id="city" type="text" pInputText> 
+        <label for="city">City</label>
+        <input id="city" type="text" pInputText />
       </div>
-      <div class="p-field p-col-12 p-md-3">
+      <!-- <div class="p-field p-col-12 p-md-3">
           <label for="state">State</label>
           <p-dropdown inputId="state" [options]="states" [(ngModel)]="selectedState" placeholder="Select" optionLabel="name"></p-dropdown>
+      </div> -->
+      <div class="p-field p-col-12 p-md-3">
+        <label for="state">State</label>
+        <p-dropdown
+          inputId="state"
+          [options]="states"
+          formControlName="state"
+          placeholder="Select"
+          optionLabel="name"
+        ></p-dropdown>
       </div>
       <div class="p-field p-col-12 p-md-3">
-          <label for="zip">Zip</label>
-          <input id="zip" type="text" pInputText> 
+        <label for="zip">Zip</label>
+        <input id="zip" type="text" pInputText />
       </div>
+    </div>
   </div>
-</div>
+
+  <h2>Menu</h2>
+
+  <p-menu [model]="items"></p-menu>
+
+  <h3>Menu as Button PopUp</h3>
+
+  <p-menu
+    [showTransitionOptions]="'5ms'"
+    [hideTransitionOptions]="'10ms'"
+    #menu
+    [popup]="true"
+    [model]="items"
+  ></p-menu>
+  <button
+    type="button"
+    pButton
+    icon="pi pi-list"
+    label="Show"
+    (click)="menu.toggle($event)"
+  ></button>
+
+  <h2>Panels</h2>
+
+  <p-panel header="Title" [toggleable]="true"> Content </p-panel>
+
+  <br />
+  <p-panel>
+    <p-header> Header content here </p-header>
+    Body Content
+    <p-footer> Footer content here </p-footer>
+  </p-panel>
+
+  <h2>Quill Editor</h2>
+
+  <!-- <p-editor formControlName="description" [style]="{'height':'320px'}"></p-editor> -->
+
+  <p-editor
+    [style]="{ height: '320px' }"
+    formControlName="description"
+  ></p-editor>
+
+  <h4>Custom Toolbar</h4>
+
+  <p-editor [style]="{ height: '320px' }" formControlName="information">
+    <p-header>
+      <span class="ql-formats">
+        <button class="ql-bold" aria-label="Bold"></button>
+        <button class="ql-italic" aria-label="Italic"></button>
+        <button class="ql-underline" aria-label="Underline"></button>
+        <button class="ql-strike" aria-label="Strike"></button>
+      </span>
+    </p-header>
+  </p-editor>
+
+  <h4>dynamic Custom Toolbar</h4>
+
+  <p-editor [style]="{ height: '320px' }" formControlName="information">
+    <ng-template>
+      <p-header>
+        <span class="ql-formats">
+          <button class="ql-bold" aria-label="Bold"></button>
+          <button class="ql-italic" aria-label="Italic"></button>
+          <button class="ql-underline" aria-label="Underline"></button>
+          <button class="ql-strike" aria-label="Strike"></button>
+        </span>
+      </p-header>
+    </ng-template>
+  </p-editor>
+
+  <pre>{{ profileForm.value | json }}</pre>
+</form>
 
 <router-outlet></router-outlet>
